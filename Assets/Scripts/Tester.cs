@@ -17,9 +17,9 @@ class Program
             while (keypress != null)
             {
 
-                var newActor = new Crewmember("Dave", "Male", "Human", 0, 100, "Ensign", "Operations", "Cooking");
+                var newActor = new Crewmember("Dave", "Male", "Human", 0, 100, 0, 2, "Cooking");
                 newActor.Age = newActor.GenerateAge();
-                newActor.Name = newActor.GenerateName();
+                newActor.Name = newActor.GenerateName("Male");
                 newActor.Gender = newActor.GenerateGender();
                 Console.WriteLine("The age is " + newActor.Age);
                 Console.WriteLine("The name is " + newActor.Name);
