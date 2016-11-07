@@ -33,19 +33,34 @@ using System.Text;
             this.health = Health;
         }
 
-        public string GenerateName() // Name Generator method
+        public string GenerateName(string gender) // Name Generator method
         {
-            var firstnameList = new List<string>();  // Create a new list for first names
+            var malefirstnameList = new List<string>();  // Create a new list for first names
             var lastnameList = new List<string>();   // Create a new list for last names
+            var femalefirstnameList = new List<string>();  // Create a new list for female first names
+                                                     // Add names to the list
+            malefirstnameList.Add("Dave");
+            malefirstnameList.Add("Brian");
+            malefirstnameList.Add("Joseph");
+            malefirstnameList.Add("Bradley");
+            malefirstnameList.Add("Jeff");
+            malefirstnameList.Add("Rick");
+            malefirstnameList.Add("Donald");
+            malefirstnameList.Add("Chad");
+            malefirstnameList.Add("Randy");
+            malefirstnameList.Add("Mike");
+            malefirstnameList.Add("Mel");
+            malefirstnameList.Add("Robert");
+            malefirstnameList.Add("Kevin");
 
-            // Add names to the list
-            firstnameList.Add("Dave");
-            firstnameList.Add("Angel");
-            firstnameList.Add("Randy");
-            firstnameList.Add("Mike");
-            firstnameList.Add("Mel");
-            firstnameList.Add("Robert");
-            firstnameList.Add("Kevin");
+            femalefirstnameList.Add("Sharon");
+            femalefirstnameList.Add("Angel");
+            femalefirstnameList.Add("Lois");
+            femalefirstnameList.Add("Cara");
+            femalefirstnameList.Add("Melisa");
+            femalefirstnameList.Add("Amy");
+            femalefirstnameList.Add("Jackie");
+            femalefirstnameList.Add("Sarah");
 
             lastnameList.Add("Navarro");
             lastnameList.Add("Cook");
@@ -55,17 +70,30 @@ using System.Text;
             lastnameList.Add("Hollie");
             lastnameList.Add("McStaggen");
 
+        if (gender == "male")
+        {
 
+            var malefirstName = rand.Next(malefirstnameList.Count);
+            var name11 = malefirstnameList.ElementAt(malefirstName);
 
             //Get the amount of names in list, and choose a random name
-            var firstName = rand.Next(firstnameList.Count);
-            var name1 = firstnameList.ElementAt(firstName);
+            var malelastName = rand.Next(lastnameList.Count);
+            var name22 = lastnameList.ElementAt(malelastName);
+            name = (name11 + " " + name22);
+            return name;
+        }
+        else
+        {
+            //Get the amount of names in list, and choose a random name
+            var firstName = rand.Next(femalefirstnameList.Count);
+            var name1 = femalefirstnameList.ElementAt(firstName);
 
             //Get the amount of names in list, and choose a random name
             var lastName = rand.Next(lastnameList.Count);
             var name2 = lastnameList.ElementAt(lastName);
             name = (name1 + " " + name2);
             return name;
+        }
         }
 
         public int GenerateAge() // Age Generator Method
@@ -109,7 +137,7 @@ using System.Text;
             SpeciesList.Add("Grey");
 
             var chooser = rand.Next(SpeciesList.Count);
-            chooser = species;
+            species = SpeciesList.ElementAt(chooser);
         return species;
 
         }
