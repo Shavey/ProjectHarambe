@@ -8,28 +8,32 @@ using System.Text;
     class Crewmember : Actor
     {
         // Member variables.
-        string rank;
+        
+        rankList rank = rankList.Cadet;
         string position;
         int experience;
         string speciality;
+        
+        // Enum list for crew ranks, defaults to cadet
+        public enum rankList { Cadet, Petty_Officer, Chief_Petty_Officer, Midshipman, Leutenant, Captain };
 
         // Crewmember Stat-Variables.
-        int speed;
-        int marksmanship;
-        int melee;
-        int social;
-        int cooking;
-        int science;
-        int medical;
-        int engineering;
-        int crafting;
-        int piloting;
-        int hacking;
-        int botany;
-        int mining;
+        public int speed;
+        public int marksmanship;
+        public int melee;
+        public int social;
+        public int cooking;
+        public int science;
+        public int medical;
+        public int engineering;
+        public int crafting;
+        public int piloting;
+        public int hacking;
+        public int botany;
+        public int mining;
 
 
-
+        // Crewmember constructor method, with Actor class extensions
         public Crewmember(string Name, string Gender, string Species, int type, int Health, string rank, string position, string speciality)
 
             : base(Name, Gender, Species, type, Health)
@@ -60,14 +64,24 @@ using System.Text;
 
             speciality = professionList.ElementAt(random);
             return speciality;
-
-
-            {
-
-            }
+                       
 
         }
 
+        
+        internal rankList Rank
+    {
+        get
+        {
+            return rank;
+        }
+
+        set
+        {
+            rankList = value;
+        }
+
+    }
         public int Speed
         {
             get
@@ -276,18 +290,6 @@ using System.Text;
             }
         }
 
-        public string Rank
-        {
-            get
-            {
-                return rank;
-            }
-
-            set
-            {
-                rank = value;
-            }
-     }
-}
+ }
 
 

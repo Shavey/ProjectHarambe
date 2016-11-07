@@ -19,6 +19,9 @@ using System.Text;
         actorType type = actorType.Player;
         private int health;
 
+        int x;
+        int y;
+
         //Working Variables for class
         public Random rand = new Random(DateTime.Now.Millisecond);
 
@@ -247,6 +250,32 @@ using System.Text;
                 health = value;
             }
         }
+
+    public int X
+    {
+        get
+        {
+            return x;
+        }
+
+        set
+        {
+            x = value;
+        }
     }
+
+    public int Y
+    {
+        get
+        {
+            return y;
+        }
+
+        set
+        {
+            y = value;
+        }
+    }
+}
 
 
