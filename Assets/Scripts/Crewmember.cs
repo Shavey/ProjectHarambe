@@ -9,13 +9,14 @@ using System.Text;
     {
         // Member variables.
         
-        rankList rank = rankList.Cadet;
+        
         string position;
         int experience;
         string speciality;
         
         // Enum list for crew ranks, defaults to cadet
         public enum rankList { Cadet, Petty_Officer, Chief_Petty_Officer, Midshipman, Leutenant, Captain };
+        rankList type = rankList.Cadet;
 
         // Crewmember Stat-Variables.
         public int speed;
@@ -34,11 +35,11 @@ using System.Text;
 
 
         // Crewmember constructor method, with Actor class extensions
-        public Crewmember(string Name, string Gender, string Species, int type, int Health, string rank, string position, string speciality)
+        public Crewmember(string Name, string Gender, string Species, int type, int Health, int rank, string position, string speciality)
 
             : base(Name, Gender, Species, type, Health)
         {
-            this.Rank = rank;
+            
             this.Position = position;
             this.Speciality = speciality;
 
@@ -69,7 +70,7 @@ using System.Text;
         }
 
         
-        internal rankList Rank
+        internal rankList rank
     {
         get
         {
@@ -78,7 +79,7 @@ using System.Text;
 
         set
         {
-            rankList = value;
+            rank = value;
         }
 
     }
