@@ -9,17 +9,15 @@ using System.Text;
     {
         // Member variables.
         
-       
         
+        string position;
         int experience;
         string speciality;
         
         // Enum list for crew ranks, defaults to cadet
         public enum rankList { Cadet, Petty_Officer, Chief_Petty_Officer, Midshipman, Leutenant, Captain };
-        rankList rank = rankList.Cadet;
+        rankList type = rankList.Cadet;
 
-        public enum PositionList { Unasigned, Helm, Tactical, Science, Comunications, Engineering, Captain, Security  }
-        PositionList position = PositionList.Unasigned;
         // Crewmember Stat-Variables.
         public int speed;
         public int marksmanship;
@@ -37,12 +35,12 @@ using System.Text;
 
 
         // Crewmember constructor method, with Actor class extensions
-        public Crewmember(string Name, string Gender, string Species, int type, int Health, int rank, int position, string speciality)
+        public Crewmember(string Name, string Gender, string Species, int type, int Health, int rank, string position, string speciality)
 
             : base(Name, Gender, Species, type, Health)
         {
             
-            
+            this.Position = position;
             this.Speciality = speciality;
 
         }
@@ -72,7 +70,7 @@ using System.Text;
         }
 
         
-        internal rankList Rank
+        internal rankList rank
     {
         get
         {
@@ -85,9 +83,7 @@ using System.Text;
         }
 
     }
-
-   
-    public int Speed
+        public int Speed
         {
             get
             {
@@ -282,18 +278,19 @@ using System.Text;
             }
         }
 
-    internal PositionList Position
-    {
-        get
+        public string Position
         {
-            return position;
+            get
+            {
+                return position;
+            }
+
+            set
+            {
+                position = value;
+            }
         }
 
-        set
-        {
-            position = value;
-        }
-    }
-}
+ }
 
 
