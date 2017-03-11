@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 
 
-class Block {
+public class Block {
 
     //Block type enum list
     enum blockType { Floor, Bulkhead, Wall, Armor, Door }
 
-    int hitpoints;
+    public int hitpoints { get; set; }
     Deployable deployable;
     LooseObject looseobject;
 
-    int x { get; set; }
-    int y { get; set; }
+    public int x { get; set; }  //Getter and setters for x,y position
+    public int y { get; set; }
 
     bool isPassable = false;
     bool doesConduct = false;

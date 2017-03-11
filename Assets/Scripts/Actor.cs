@@ -6,7 +6,7 @@ using System.Text;
 
 
 
-    class Actor
+    public class Actor
     {
         //Property variables for class
         private int age = 0;

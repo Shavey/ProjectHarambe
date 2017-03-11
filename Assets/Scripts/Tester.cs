@@ -25,8 +25,8 @@ class Program
                 Console.WriteLine("The name is " + newActor.Name);
                 Console.WriteLine("The Gender is " + newActor.Gender);
                 Console.WriteLine("The Rank is " + newActor.rank);
-                Console.WriteLine("The Position is " + newActor.Position);
-                Console.WriteLine("The Specialty is " + newActor.Speciality);
+                Console.WriteLine("The Position is " + newActor.position);
+                Console.WriteLine("The Specialty is " + newActor.speciality);
 
 
                 Console.ReadLine();
