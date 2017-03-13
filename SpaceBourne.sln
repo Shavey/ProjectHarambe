@@ -1,7 +1,12 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{F7E6C20B-43B7-6972-B0CC-3BC66D03E0E8}") = "SpaceBourne", "Assembly-CSharp.csproj", "{09CDEA4F-AACD-F734-7039-FB1704E577BB}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{09CDEA4F-AACD-F734-7039-FB1704E577BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpacebourneTesterApp", "..\SpacebourneTesterApp\SpacebourneTesterApp.csproj", "{6DB70119-37AA-43ED-8068-9EE0E67986C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{965DC5DE-2E34-4616-9E69-4E5EEA29F316}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +18,14 @@ Global
 		{09CDEA4F-AACD-F734-7039-FB1704E577BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09CDEA4F-AACD-F734-7039-FB1704E577BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09CDEA4F-AACD-F734-7039-FB1704E577BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB70119-37AA-43ED-8068-9EE0E67986C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB70119-37AA-43ED-8068-9EE0E67986C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB70119-37AA-43ED-8068-9EE0E67986C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB70119-37AA-43ED-8068-9EE0E67986C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{965DC5DE-2E34-4616-9E69-4E5EEA29F316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{965DC5DE-2E34-4616-9E69-4E5EEA29F316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{965DC5DE-2E34-4616-9E69-4E5EEA29F316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{965DC5DE-2E34-4616-9E69-4E5EEA29F316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
